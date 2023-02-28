@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This scrpt manages my processes
+# This script manages "manage_my_processes"
 
 start() {
 	./manage_my_process &
@@ -8,7 +8,7 @@ start() {
 }
 
 stop() {
-	kill "$(pgrep -f './manage_my_process')"
+	kill "$(pgrep -f '/var/run/my_process.pid')"
 	rm -f /var/run/my_process.pid
 	if [ "$1" -eq 1 ]; then echo "manage_my_process stopped"; fi
 }
