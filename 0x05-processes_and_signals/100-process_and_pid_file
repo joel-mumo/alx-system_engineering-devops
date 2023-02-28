@@ -8,7 +8,6 @@
 
 sudo touch /var/run/holbertonscript.pid
 sudo bash -c 'echo $$ > /var/run/holbertonscript.pid'
-
 while true; do
 	echo "To infinity and beyond"
 	sleep 2
