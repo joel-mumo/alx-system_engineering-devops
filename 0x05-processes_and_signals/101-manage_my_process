@@ -8,7 +8,7 @@ start() {
 }
 
 stop() {
-	kill "$(pgrep -f '/var/run/my_process.pid')"
+	kill "$(cat /var/run/my_process.pid)"
 	rm -f /var/run/my_process.pid
 	if [ "$1" -eq 1 ]; then echo "manage_my_process stopped"; fi
 }
